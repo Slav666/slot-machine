@@ -10,15 +10,16 @@ class Statistics {
       win: win,
       bid: bid,
     };
+
     console.log(gameResult);
     this.gameResult.push(gameResult);
   }
   showGameStatistics() {
     let games = this.gameResult.length;
-    let numberWins = this.gameResult.filter((result) => result.win).length;
-    let numberLosses = this.gameResult.filter((result) => !result.win).length;
+    let wins = this.gameResult.filter((result) => result.win).length;
+    let losses = this.gameResult.filter((result) => !result.win).length;
     // console.log(numberLosses);
-    return [games, numberWins, numberLosses];
+    return [games, wins, losses];
   }
 }
 
